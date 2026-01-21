@@ -1,0 +1,629 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F15E3F8C-0F55-497C-A34D-727AB6194547}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MultiObjective</RootNamespace>
+    <AssemblyName>MultiObjective</AssemblyName>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebBimodal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DebBimodal.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DTLZ1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DTLZ1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DTLZ7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DTLZ7.resx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function.cs" />
+    <Compile Include="Kita.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kita.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Kursawe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kursawe.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Particle.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DebBimodal.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DebBimodal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTLZ1.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DTLZ1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTLZ7.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DTLZ7.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kita.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Kita.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kursawe.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Kursawe.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ7\200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTLZ1\200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\g200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\g200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\g200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kita\s200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kursawe\s200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s40.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s50.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s60.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s70.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s80.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s100.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s125.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s150.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s175.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DebBimodal\s200.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

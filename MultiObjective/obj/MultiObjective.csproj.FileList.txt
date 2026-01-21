@@ -1,0 +1,13 @@
+bin\Debug\MultiObjective.exe
+bin\Debug\MultiObjective.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MultiObjective.DebBimodal.resources
+obj\Debug\MultiObjective.DTLZ1.resources
+obj\Debug\MultiObjective.DTLZ7.resources
+obj\Debug\MultiObjective.frmMain.resources
+obj\Debug\MultiObjective.Kita.resources
+obj\Debug\MultiObjective.Kursawe.resources
+obj\Debug\MultiObjective.Properties.Resources.resources
+obj\Debug\MultiObjective.csproj.GenerateResource.Cache
+obj\Debug\MultiObjective.exe
+obj\Debug\MultiObjective.pdb
